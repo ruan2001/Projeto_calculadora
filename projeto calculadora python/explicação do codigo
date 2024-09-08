@@ -1,0 +1,36 @@
+Claro, vamos detalhar o código passo a passo:
+
+Importação de módulos:
+
+O código começa importando duas classes do módulo tkinter: Tk e ttk. Tk é a classe principal que representa a janela principal da aplicação, enquanto ttk é usada para criar widgets com estilos consistentes.
+Definição de cores:
+
+O código define algumas variáveis para armazenar códigos de cores hexadecimais que serão usados na interface gráfica da calculadora. Essas cores são usadas para estilizar diferentes elementos da interface.
+Criação da janela principal (Tk):
+
+janela = Tk() cria uma instância da classe Tk, que representa a janela principal da aplicação.
+janela.title("Calculadora") define o título da janela como "Calculadora".
+janela.geometry("235x310") define o tamanho da janela como 235 pixels de largura por 310 pixels de altura.
+janela.config(bg=cor1) configura o fundo da janela principal com a cor preta definida anteriormente.
+Criação de frames:
+
+Frame_tela e Frame_corpo são frames criados para organizar os elementos da calculadora. Frame_tela é usado para exibir os valores inseridos e o resultado, enquanto Frame_corpo é usado para os botões da calculadora.
+Os frames são configurados com largura, altura e cor de fundo especificadas.
+Variáveis e funções:
+
+todos_valores: Uma variável global inicializada como uma string vazia para armazenar os valores inseridos na calculadora.
+valor_texto: Uma variável do tipo StringVar() é criada para armazenar o valor atual exibido na tela da calculadora.
+Definição de funções:
+
+entrar_valores(event): Esta função é chamada quando um botão é pressionado na calculadora. Ela concatena o valor do botão pressionado na variável todos_valores e atualiza a tela com o valor.
+calcular(): Esta função é chamada quando o botão "=" é pressionado. Ela calcula o resultado da expressão armazenada em todos_valores usando a função eval() e exibe o resultado na tela.
+limpar_tela(): Esta função é chamada quando o botão "C" é pressionado. Ela redefine a variável todos_valores como uma string vazia e limpa a tela.
+Criação de widgets:
+
+Um Label (app_label) é criado dentro do frame da tela para exibir os valores inseridos e o resultado da operação atual.
+Vários botões (b_1 a b_18) são criados dentro do frame do corpo para representar os números, operadores e botões de ação da calculadora. Cada botão é associado a uma função específica através do parâmetro command.
+Configuração da janela principal:
+
+janela.mainloop(): Inicia o loop principal da aplicação, garantindo que a janela permaneça aberta até que o usuário decida fechá-la. Este método é chamado no final do código.
+Em resumo, o código cria uma interface gráfica de uma calculadora básica onde os usuários podem inserir números e realizar operações matemáticas simples, como adição, subtração, multiplicação e divisão. As operações são realizadas quando o usuário
+pressiona o botão "=" e o resultado é exibido na tela. O botão "C" limpa a tela e permite que o usuário comece uma nova operação.
